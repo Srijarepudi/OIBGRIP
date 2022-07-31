@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Calculator </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #btn{
+        border-radius: 50px;
+        background-color: white;
+        color:#fa94a3;
+        height: 65px;
+        width: 65px;
+        margin:3px;
+        }
+        #btn1{
+        border-radius: 50px;
+        background-color: white;
+        color:#fa94a3;
+        height: 65px;
+        width: 145px;
+        }
+         #btn:hover,#btn1:hover {
+        background-color: lightgray;
+       color: white;
+        }
+        h1{
+
+            text-align: center;
+            color:#fa94a3;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+  
+ <body>
+  
+    <div class="container">
+       <div><h1>Calculator  <i class="fa fa-calculator" style="font-size:24px;color:#fa94a3"></i></h1></div>
+        <form class="calculator" name="calc">
+            <input type="text" readonly class="value" name="txt">
+            <span id="btn1"  class="num clear" onclick="calc.txt.value = ''">c</span>
+            <span id="btn"  class="num" onclick="document.calc.txt.value += '/'">/</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '*'">*</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '7'">7</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '8'">8</span>  
+            <span id="btn" class="num" onclick="document.calc.txt.value += '9'">9</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '-'">-</span>  
+            <span id="btn" class="num" onclick="document.calc.txt.value += '4'">4</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '5'">5</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '6'">6</span>
+            <span id="btn" class="num plus" onclick="document.calc.txt.value += '+'">+</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '1'">1</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '2'">2</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '3'">3</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '0'">0</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '00'">00</span>
+            <span id="btn" class="num" onclick="document.calc.txt.value += '.'">.</span>
+            <span  class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+       
+            
+
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 15,
+            speed: 400,
+            glare:true,
+            "max-glare":0.2,
+        });
+    </script>
+</body >
+</html >
